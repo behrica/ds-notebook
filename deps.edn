@@ -8,4 +8,4 @@
    ;; notebooks to be built, accepts globs patterns
    :exec-args {:bundle? false
                :paths [
-                       "notebooks/*.clj"]}}}}
+                       "notebooks/test.clj"]}}}}
