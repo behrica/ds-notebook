@@ -34,6 +34,9 @@ jobs:
           path: .cache
           key: ${{ runner.os }}-clerk
 
+      - name: Clojure prepare
+        run: clj -X:deps prep
+
       - name: 🏗 Clerk Build
         run: clojure -X:nextjournal/clerk :path-prefix '"ds-notebooks/"' :git/sha '"${{ github.sha }}"'
 
