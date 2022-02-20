@@ -168,9 +168,9 @@
 
 
 (defn r-object [library function params]
-  (prn :req library function params)
+  (prn :time (java.util.Date.) :req library function params)
   (let [resp (ocpu/object base-url :library library  :R function params)]
-    (prn :resp resp)
+    (prn :time  (java.util.Date.) :resp resp)
     (when (>  (:status resp) 201) (throw (ex-info "error" resp)))
     (-> resp
         :result
