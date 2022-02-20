@@ -1,0 +1,11 @@
+{:paths ["dev" "notebooks"]
+ :deps {io.github.nextjournal/clerk {:git/sha "dad9865e15101cc047efc17c7b15ea277f514176"}}
+
+ :aliases
+ {:nextjournal/clerk
+  {
+   :exec-fn nextjournal.clerk/build-static-app!
+   ;; notebooks to be built, accepts globs patterns
+   :exec-args {:bundle? false
+               :paths [
+                       "notebooks/*.clj"]}}}}
