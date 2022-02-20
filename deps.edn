@@ -5,7 +5,8 @@
         com.rpl/nippy-serializable-fns {:mvn/version "0.4.1"}
         io.github.nextjournal/clerk    {:git/sha "120b1223cfe6a37a12ce6e13bdbe11fabc6161dc"}
 
-        scicloj/scicloj.ml.smile       {:git/sha "28b64bfa89abcd7500b539e00570eba44e39802f"}
+        scicloj/scicloj.ml.smile       {:git/url "https://github.com/scicloj/scicloj.ml.smile"
+                                        :git/sha "efae4a21b8916c0995e07b24b18f0b295a72ab97"}
         techascent/tech.ml.dataset     {:mvn/version "6.065"}
         ;;
         opencpu-clj/opencpu-clj        {:mvn/version "0.3.1" :exclusions [commons-logging/commons-logging log4j/log4j]}}
