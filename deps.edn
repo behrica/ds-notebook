@@ -1,11 +1,29 @@
 {:paths ["dev" "notebooks"]
- :deps {io.github.nextjournal/clerk {:git/sha "dad9865e15101cc047efc17c7b15ea277f514176"}}
+ :deps { ;; org.slf4j/log4j-over-slf4j {:mvn/version  "1.7.36"}
+        ;; org.slf4j/jcl-over-slf4j {:mvn/version "1.7.36"}
+        scicloj/scicloj.ml             {:mvn/version "0.1.4" :exclusions [commons-logging/commons-logging log4j/log4j]}
+        com.rpl/nippy-serializable-fns {:mvn/version "0.4.1"}
+        io.github.nextjournal/clerk    {:git/sha "120b1223cfe6a37a12ce6e13bdbe11fabc6161dc"}
 
- :aliases
- {:nextjournal/clerk
-  {
-   :exec-fn nextjournal.clerk/build-static-app!
-   ;; notebooks to be built, accepts globs patterns
-   :exec-args {:bundle? false
-               :paths [
-                       "notebooks/test.clj"]}}}}
+        scicloj/scicloj.ml.smile       {:git/sha "28b64bfa89abcd7500b539e00570eba44e39802f"}
+        techascent/tech.ml.dataset     {:mvn/version "6.065"}
+        ;;
+        opencpu-clj/opencpu-clj        {:mvn/version "0.3.1" :exclusions [commons-logging/commons-logging log4j/log4j]}}
+
+
+
+
+
+ :aliases {
+           :build {:extra-deps {io.github.seancorfield/build-clj
+                                {:git/tag "v0.5.2" :git/sha "8f75b81"}}
+
+                   :ns-default build}
+
+           :nextjournal/clerk
+           {
+            :exec-fn nextjournal.clerk/build-static-app!
+            ;; notebooks to be built, accepts globs patterns
+            :exec-args {:bundle? false
+                        :paths [
+                                "notebooks/kaggle.clj"]}}}}
