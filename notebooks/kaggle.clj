@@ -163,8 +163,8 @@
 
 ;;  # PPS
 
-;; (def base-url "https://my-container-app.livelybay-00debe37.westeurope.azurecontainerapps.io")
-(def base-url "http://localhost:8080")
+(def base-url "https://my-container-app.livelybay-00debe37.westeurope.azurecontainerapps.io")
+;; (def base-url "http://localhost:8080")
 
 
 (defn r-object [library function params]
