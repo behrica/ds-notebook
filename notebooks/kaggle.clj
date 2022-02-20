@@ -169,6 +169,7 @@
 
 (defn r-object [library function params]
   (let [resp (ocpu/object base-url :library library  :R function params)]
+    (prn :resp resp)
     (when (>  (:status resp) 201) (throw (ex-info "error" resp)))
     (-> resp
         :result
