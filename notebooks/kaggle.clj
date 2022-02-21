@@ -17,9 +17,6 @@
    
   (:import [javax.imageio ImageIO]))
 
-;; Text block 21 gets analused wrongly
-
-
 
 (comment
 
@@ -78,10 +75,10 @@
 
 
 ;;  # The data
-^{::clerk/width :full}
+
 (def df (load-hp-data "train.csv.gz"))
 
-^{::clerk/width :full}
+
 (->
  df
  (tc/info))
@@ -118,9 +115,10 @@
       seq))
 
 
+
 (clerk/vl
- {::clerk/width :full}
- {:$schema "https://vega.github.io/schema/vega-lite/v5.json"
+ {:usermeta {:embedOptions {:renderer "svg"}}
+  :$schema "https://vega.github.io/schema/vega-lite/v5.json"
   :data {:values (vec (tc/rows df :as-maps))}
   :title "Categorical cols"
   :repeat col-names-categorical
@@ -138,8 +136,9 @@
 
 
 (clerk/vl
- {::clerk/width :full}
- {:$schema "https://vega.github.io/schema/vega-lite/v5.json"
+
+ {:usermeta {:embedOptions {:renderer "svg"}}
+  :$schema "https://vega.github.io/schema/vega-lite/v5.json"
   :data {:values (vec (tc/rows df :as-maps))}
   :title "Integer cols"
   :repeat col-names-int
@@ -165,7 +164,8 @@
 
 
 (clerk/vl
- {:$schema "https://vega.github.io/schema/vega-lite/v5.json"
+ {:usermeta {:embedOptions {:renderer "svg"}}
+  :$schema "https://vega.github.io/schema/vega-lite/v5.json"
   :data {:values (-> pps :scores)}
 
   :encoding {:x {:field "pps" :title "PPS" :type "quantitative"}
