@@ -3,8 +3,8 @@
         ;; org.slf4j/jcl-over-slf4j {:mvn/version "1.7.36"}
         scicloj/scicloj.ml             {:mvn/version "0.1.4" :exclusions [commons-logging/commons-logging log4j/log4j]}
         com.rpl/nippy-serializable-fns {:mvn/version "0.4.1"}
-        io.github.nextjournal/clerk ;; {:git/sha "c35eb1371985a37763344ce2ae8d705b1ab4600e"}
-        {:local/root "../clerk"}
+        io.github.nextjournal/clerk    {:git/sha "c35eb1371985a37763344ce2ae8d705b1ab4600e"}
+        ;; {:local/root "../clerk"}
 
         scicloj/scicloj.ml.smile       {:git/url "https://github.com/scicloj/scicloj.ml.smile"
                                         :git/sha "efae4a21b8916c0995e07b24b18f0b295a72ab97"}
