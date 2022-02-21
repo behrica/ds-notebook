@@ -11,19 +11,26 @@
             [clojure.string :as str]
             [opencpu-clj.ocpu :as ocpu]
             [clojure.java.io :as io]
-            [pps :as pps])
+            [pps :as pps]
+            [clojure.tools.analyzer.jvm :as ana])
             ;; [com.rpl.nippy-serializable-fn] ;; enable freeze of fns)
    
   (:import [javax.imageio ImageIO]))
 
-(comment
+;; Text block 21 gets analused wrongly
+
+(->
 
 
- 
-  (clerk/clear-cache! 'kaggle/df)
+ (clerk/parse-file "notebooks/kaggle.clj")
+ :blocks
+
+ (nth 21)
+ :text
+ read-string
+ h/analyze)
 
 
-  :ok)
 
 
 (comment
