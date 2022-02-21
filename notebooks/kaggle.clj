@@ -19,14 +19,6 @@
 
 ;; Text block 21 gets analused wrongly
 
-(->
- (clerk/parse-file "notebooks/kaggle.clj")
- :blocks
- (nth 22)
- :text
- read-string
- h/analyze
- :deps)
 
 
 (comment
@@ -215,7 +207,8 @@
 
 (clerk/vl
 
- {:$schema "https://vega.github.io/schema/vega-lite/v5.json"
+ {:usermeta {:embedOptions {:renderer "svg"}}
+  :$schema "https://vega.github.io/schema/vega-lite/v5.json"
   :config {:axis {:grid true :tickBand "extent"}}
   :width 600
   :height 600

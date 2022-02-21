@@ -74,6 +74,7 @@
 (clerk/vl
 
  {:$schema "https://vega.github.io/schema/vega-lite/v5.json"
+  :usermeta {:embedOptions {:renderer "svg"}}
   :config {:axis {:grid true :tickBand "extent"}}
   :width 600
   :height 600
