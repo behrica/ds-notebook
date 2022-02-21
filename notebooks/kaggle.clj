@@ -25,7 +25,8 @@
  (nth 22)
  :text
  read-string
- h/analyze)
+ h/analyze
+ :deps)
 
 
 (comment
