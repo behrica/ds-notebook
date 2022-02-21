@@ -20,17 +20,12 @@
 ;; Text block 21 gets analused wrongly
 
 (->
-
-
  (clerk/parse-file "notebooks/kaggle.clj")
  :blocks
-
- (nth 21)
+ (nth 22)
  :text
  read-string
  h/analyze)
-
-
 
 
 (comment
