@@ -207,7 +207,8 @@
        (map #(update % :pps (fn [pps]
                               (Float/parseFloat  (format "%.2f" (float pps))))))))
 
-(map :pps pps-scores)
+
+
 
 (clerk/vl
 
